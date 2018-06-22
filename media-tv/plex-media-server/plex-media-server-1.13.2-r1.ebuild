@@ -7,8 +7,8 @@
 EAPI="5"
 
 inherit eutils user
-MAGIC1="4460"
-MAGIC2="a39b25852"
+MAGIC1="5154"
+MAGIC2="fd05be322"
 URI="https://downloads.plex.tv/plex-media-server"
 DESCRIPTION="Plex Media Server is a free media library that is intended for use with a plex client available for Windows, OS X, iOS and Android or web systems. It is a standalone product which can be used in conjunction with every program, that knows the API.  For managing the library a web based interface is provided."
 HOMEPAGE="http://www.plex.tv/"
@@ -47,7 +47,7 @@ src_install() {
 	# replace debian specific init scripts with gentoo specific ones
 	rm ${D}/etc/init.d/plexmediaserver
 	rm -r ${D}/etc/init
-	newinitd "${FILESDIR}"/pms_initd_1 plex-media-server
+	newinitd "${FILESDIR}"/pms_initd_2 plex-media-server
 
 	info "moving config files"
 	# move the config to the correct place
